@@ -1,0 +1,42 @@
+package cn.schema.observer;
+
+import java.util.ArrayList;
+
+
+public class WeatherData implements Subject{
+
+	
+	private ArrayList observers;
+	private float temp;
+	private float humdity;
+	private float pressure;
+	
+	@Override
+	public void registerObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void measurementsChanged(){
+		this.notifyObserver(o);;
+	}
+	
+	public void 
+	public static void main(String args[]){
+		
+		System.out.println("Hello");
+		
+	}
+}

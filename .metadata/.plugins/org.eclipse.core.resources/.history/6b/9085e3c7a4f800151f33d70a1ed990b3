@@ -1,0 +1,28 @@
+package cn.schema.observer;
+
+public class WeatherData implements Subject{
+
+	public static void main(String args[]){
+		
+		System.out.println("Hello");
+		
+	}
+
+	@Override
+	public void registerObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+}

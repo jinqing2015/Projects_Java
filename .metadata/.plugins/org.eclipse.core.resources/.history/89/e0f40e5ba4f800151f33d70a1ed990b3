@@ -1,0 +1,5 @@
+package cn.schema.observer;
+
+public class Observer {
+
+}
