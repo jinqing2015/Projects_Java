@@ -7,7 +7,7 @@ public class TestCalendar {
 	
 	public static void main(String args[]){
 		
-		TestAbstract ta = new TestAbstract();
+		TestAbstract ta = new TestAbstract()
 			
 	}	
 }

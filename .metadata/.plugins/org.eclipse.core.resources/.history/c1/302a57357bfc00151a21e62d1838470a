@@ -1,0 +1,9 @@
+package cn.bh.Test;
+
+public abstract class TestAbstract {
+	
+	TestAbstract(){
+		
+		
+	}
+}

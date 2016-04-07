@@ -3,6 +3,7 @@ package cn.schema.decorator;
 public class DecoratorTest {
 
 	public static void main(String args[]){
+		Beverage beverage = new Beverage();
 		
 		
 		System.out.println("------DecoratorTest------ ");
