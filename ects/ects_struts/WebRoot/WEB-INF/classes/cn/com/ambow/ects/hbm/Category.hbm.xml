@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.com.ambow.ects.entity">
+		<class name="Category" table="category">
+		<!-- name代表的属性名 column对应表列名 -->
+			<id name="id" column="category_id">
+				<generator class="native"></generator>
+			</id>
+			<property name="name" column="name"></property>
+			<property name="descriptions" column="descriptions"></property>
+			<set name="products" cascade="all" inverse="true">
+				<key column="category_id"></key>
+				<one-to-many class="Product"/>
+			</set>
+		</class>
+
+</hibernate-mapping>

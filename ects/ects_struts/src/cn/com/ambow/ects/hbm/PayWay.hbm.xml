@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.com.ambow.ects.entity">
+		<class name="PayWay" table="payway">
+		<!-- name代表的属性名 column对应表列名 -->
+			<id name="id" column="payway_id">
+				<generator class="native"></generator>
+			</id>
+			<property name="payStyle" column="payStyle"></property>
+		</class>
+
+</hibernate-mapping>

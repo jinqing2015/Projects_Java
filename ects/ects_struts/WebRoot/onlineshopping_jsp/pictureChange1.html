@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+
+<title>图片自动跳转</title>
+
+<script language="javascript">
+
+setInterval(test,1000);  
+
+var array=new Array();
+
+ var index=0;
+
+ var array= new Array("product/big_pic21.jpg","product/big_pic22.jpg","product/big_pic21.jpg","product/big_pic24.jpg","product/big_pic25.jpg","product/big_pic26.jpg","product/big_pic27.jpg","product/big_pic28.jpg","product/big_pic29.jpg","product/big_pic210.jpg");
+
+ function test()
+
+ {    var myimg=document.getElementById("imgs"); 
+
+   if(index==array.length-1)
+
+   {     index=0;     }else{      index++;      }  
+
+   myimg.src=array[index];  
+
+}
+
+</script>
+
+</head>
+
+<body  >
+
+<img  id="imgs" src="image/1.jpg" /> </body>
+
+</html>
+</td>
+	  </tr>
+	</table>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="gbk" ?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="loginForm" type="cn.com.ambow.ects.web.struts.form.LoginForm"></form-bean>
+		<form-bean name="registerForm" type="cn.com.ambow.ects.web.struts.form.RegisterForm"></form-bean>
+		<form-bean name="modifyForm" type="cn.com.ambow.ects.web.struts.form.ModifyForm"></form-bean>
+		<form-bean name="pageForm" type="cn.com.ambow.ects.web.struts.form.PageForm"></form-bean>
+
+	</form-beans>
+	<action-mappings>
+		<!--
+			用户模块
+		-->
+		<action path="/onlineshopping_jsp/Login" type="cn.com.ambow.ects.web.servlet.handler.UserHandler" parameter="login" name="loginForm" validate="true" input="/onlineshopping_jsp/login.jsp">
+			<forward name="success" path="/onlineshopping_jsp/index.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/login.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/Register" type="cn.com.ambow.ects.web.servlet.handler.UserHandler" parameter="register" name="registerForm" validate="true" input="/onlineshopping_jsp/register.jsp">
+			<forward name="success" path="/onlineshopping_jsp/login.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/register.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/Modify" type="cn.com.ambow.ects.web.servlet.handler.UserHandler" parameter="modify" name="modifyForm" validate="true" input="/onlineshopping_jsp/modify.jsp">
+			<forward name="success" path="/onlineshopping_jsp/modifysuccess.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/modify.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/Logout" type="cn.com.ambow.ects.web.servlet.handler.UserHandler" parameter="logout">
+			<forward name="success" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		<!--
+			商品模块
+		-->
+		<action path="/onlineshopping_jsp/ProductList" type="cn.com.ambow.ects.web.servlet.handler.ProductHandler" parameter="productList">
+			<forward name="success1" path="/onlineshopping_jsp/list1.jsp"></forward>
+			<forward name="success2" path="/onlineshopping_jsp/list2.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/Detials" type="cn.com.ambow.ects.web.servlet.handler.ProductHandler" parameter="productById">
+			<forward name="success" path="/onlineshopping_jsp/details.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		<action path="/onlineshopping_jsp/FindAll" type="cn.com.ambow.ects.web.servlet.handler.ProductHandler" parameter="findAll" name="pageForm" validate="true" input="/onlineshopping_jsp/index.jsp">
+			<forward name="showlist" path="/onlineshopping_jsp/list.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		<action path="/onlineshopping_jsp/FindProductByName" type="cn.com.ambow.ects.web.servlet.handler.ProductHandler" parameter="productByName">
+			<forward name="success" path="/onlineshopping_jsp/details.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		<action path="/onlineshopping_jsp/ProductListForSale" type="cn.com.ambow.ects.web.servlet.handler.ProductHandler" parameter="productListForSale">
+			<forward name="success" path="/onlineshopping_jsp/listforsale.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<!--
+			购物车模块
+		-->
+		<action path="/onlineshopping_jsp/ShopCart" type="cn.com.ambow.ects.web.servlet.handler.ShoppingCarHandler" parameter="ShowShopCart">
+			<forward name="success" path="/onlineshopping_jsp/myorder.jsp" redirect="true"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/AddToCart" type="cn.com.ambow.ects.web.servlet.handler.ShoppingCarHandler" parameter="AddToCart">
+			<forward name="success" path="/onlineshopping_jsp/myorder.jsp" redirect="true"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/DeleteFromCart" type="cn.com.ambow.ects.web.servlet.handler.ShoppingCarHandler" parameter="DeleteFromCart">
+			<forward name="success" path="/onlineshopping_jsp/myorder.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		<action path="/onlineshopping_jsp/AddAmount" type="cn.com.ambow.ects.web.servlet.handler.ShoppingCarHandler" parameter="AddAmount">
+			<forward name="myorder" path="/onlineshopping_jsp/myorder.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/ClearShopCart" type="cn.com.ambow.ects.web.servlet.handler.ShoppingCarHandler" parameter="ClearShopCart">
+			<forward name="success" path="/onlineshopping_jsp/myorder.jsp"></forward>
+		</action>
+		
+		<!--
+			订单模块
+		-->
+		<action path="/onlineshopping_jsp/CreateOrder" type="cn.com.ambow.ects.web.servlet.handler.OrderHandler" parameter="createOrder">
+			<forward name="success" path="/onlineshopping_jsp/UserOrders.do"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/CheckOrder" type="cn.com.ambow.ects.web.servlet.handler.OrderHandler" parameter="checkOrder">
+			<forward name="shopcartnull" path="/onlineshopping_jsp/shopcartnull.jsp"></forward>
+			<forward name="checkorder" path="/onlineshopping_jsp/checkorder.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/OrderMoreDetails" type="cn.com.ambow.ects.web.servlet.handler.OrderHandler" parameter="orderMoreDetails">
+			<forward name="orderdetailsmore" path="/onlineshopping_jsp/orderdetailsmore.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/OrderSuccess" type="cn.com.ambow.ects.web.servlet.handler.OrderHandler" parameter="orderSuccess">
+			<forward name="ordersuccess" path="/onlineshopping_jsp/ordersuccess.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/UserOrders" type="cn.com.ambow.ects.web.servlet.handler.OrderHandler" parameter="showUserOrders" name="pageForm" validate="true" input="/onlineshopping_jsp/index.jsp">
+			<forward name="userorders" path="/onlineshopping_jsp/userorders.jsp"></forward>
+			<forward name="error" path="/onlineshopping_jsp/index.jsp"></forward>
+		</action>
+		<!--
+			商品评论模块
+		-->
+		<action path="/onlineshopping_jsp/AddComment" type="cn.com.ambow.ects.web.servlet.handler.CommentAction" parameter="addComment" >
+			<forward name="success" path="/onlineshopping_jsp/UserOrders.do"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/FindAllComment" type="cn.com.ambow.ects.web.servlet.handler.CommentAction" parameter="findAllComment" >
+			<forward name="success" path="/onlineshopping_jsp/comment.jsp"></forward>
+		</action>
+		
+		<action path="/onlineshopping_jsp/TurnToComment" type="cn.com.ambow.ects.web.servlet.handler.CommentAction" parameter="turnToComment" >
+			<forward name="success" path="/onlineshopping_jsp/AddComment.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+	<message-resources parameter="ActionMessage"></message-resources>
+</struts-config>

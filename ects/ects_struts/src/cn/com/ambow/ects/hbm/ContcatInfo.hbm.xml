@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.com.ambow.ects.entity">
+		<class name="ContcatInfo" table="contcatinfo">
+		<!-- name代表的属性名 column对应表列名 -->
+			<id name="id" column="contcatinfo_id">
+				<generator class="foreign">
+					<param name="property">user</param>
+				</generator>
+			</id>
+			<property name="street1" column="street1"></property>
+			<property name="street2" column="street2"></property>
+			<property name="city" column="city"></property>
+			<property name="zip" column="zip"></property>
+			<property name="email" column="email"></property>
+			<property name="homePhone" column="homePhone"></property>
+			<property name="cellPhone" column="cellPhone"></property>
+			<property name="officePhone" column="officePhone"></property>
+			<one-to-one name="user" class="User" constrained="true"></one-to-one>
+			<many-to-one name="province" class="Province" column="province_id"></many-to-one>
+			<many-to-one name="country" class="Country" column="country_id"></many-to-one>
+			
+		</class>
+
+</hibernate-mapping>
