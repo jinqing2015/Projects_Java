@@ -1,0 +1,8 @@
+package cn.schema.decorator;
+
+public abstract class Beverage {
+	
+	String description = "Unknow Beverage";
+	
+	
+}

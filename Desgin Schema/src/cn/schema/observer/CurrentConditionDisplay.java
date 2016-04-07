@@ -49,4 +49,5 @@ public class CurrentConditionDisplay implements Observer, DisplayElement{
 		ccd1.display();
 		ccd2.display();
 	}
+
 }
