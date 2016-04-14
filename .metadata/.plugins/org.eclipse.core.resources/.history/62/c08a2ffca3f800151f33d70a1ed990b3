@@ -1,5 +1,0 @@
-package cn.schema.observer;
-
-public interface Subject {
-
-}

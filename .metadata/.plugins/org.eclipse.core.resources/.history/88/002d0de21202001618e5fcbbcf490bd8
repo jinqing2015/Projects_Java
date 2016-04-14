@@ -1,0 +1,12 @@
+package cn.bh.Test;
+
+import java.io.*;
+
+public class FileTest {
+	public static void main(String args[])throws IOException
+	{
+		File file = new File(".");
+		
+		
+	}
+}

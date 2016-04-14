@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item value="true" key="ShowStatusLine"/>
-		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Desgin Schema/src&amp;lt;cn.schema.decorator{DecoratorTest.java[DecoratorTest&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Desgin Schema/src&amp;lt;cn.schema.observer{CurrentConditionDisplay.java[CurrentConditionDisplay&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Desgin Schema/src&amp;lt;cn.schema.decorator{DecoratorTest.java[DecoratorTest&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Desgin Schema/src&amp;lt;cn.schema.observer{CurrentConditionDisplay.java[CurrentConditionDisplay&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Test/src&amp;lt;cn.bh.Test{TestCalendar.java[TestCalendar&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Test/src&amp;lt;cn.bh.Test{FileTest.java[FileTest&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Test/src&amp;lt;cn.bh.Test{FileInputStreamTest.java[FileInputStreamTest&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
