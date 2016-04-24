@@ -1,6 +1,6 @@
 package cn.bh.Test;
 
-public  class TestAbstract {
+public class TestAbstract {
 	
 	public  TestAbstract(){
 		

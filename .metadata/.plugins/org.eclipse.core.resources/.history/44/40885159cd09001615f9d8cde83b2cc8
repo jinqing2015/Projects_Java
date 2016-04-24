@@ -1,0 +1,20 @@
+package cn.bh.Test;
+
+import java.io.FileOutputStream;
+import java.nio.channels.FileChannel;
+
+public class FileLockTest {
+
+	public static void main(String args[]){
+		
+		try(
+				FileOutputStream output = new FileOutputStream("a.txt");
+				FileChannel outChannel = output.getChannel();
+				)
+		{
+			FileLock lock = outChannel.lock();
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+}

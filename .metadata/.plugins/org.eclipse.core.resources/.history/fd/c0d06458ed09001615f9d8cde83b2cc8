@@ -1,0 +1,17 @@
+package cn.bh.Test;
+
+import java.nio.file.Paths;
+import java.nio.file.StandardWatchEventKinds;
+
+public class WatchServiceTest {
+
+	public static void main(String args[])
+		throws Exception
+	{
+		Paths.get("c:/").register(watcher 
+				, StandardWatchEventKinds.ENTRY_CREATE
+				, StandardWatchEventKinds.ENTRY_CREATE
+				StandardWatchEventKinds.ENTRY_CREATE);
+		
+	}
+}

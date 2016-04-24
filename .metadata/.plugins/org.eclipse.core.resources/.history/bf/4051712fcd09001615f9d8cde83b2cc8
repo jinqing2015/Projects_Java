@@ -1,0 +1,15 @@
+package cn.bh.Test;
+
+public class FileLockTest {
+
+	public static void main(String args[]){
+		
+		try(
+				FileOutputStream output = new FileOutputStream("a.txt");
+				){
+			
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+}

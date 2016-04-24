@@ -1,0 +1,12 @@
+package cn.bh.Test;
+
+import java.nio.charset.Charset;
+
+public class CharsetTransform {
+
+	public static void main(String args[]){
+		
+		Charser cn = Charset.forName("GBK");
+		
+	}
+}

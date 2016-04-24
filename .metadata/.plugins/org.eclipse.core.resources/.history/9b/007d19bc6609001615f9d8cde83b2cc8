@@ -1,0 +1,11 @@
+package cn.bh.Test;
+
+import java.nio.*;
+
+public class BufferTest {
+
+	public static void main(String args[]){
+		
+		
+	}
+}

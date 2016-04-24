@@ -1,0 +1,16 @@
+package cn.bh.Test;
+
+import java.nio.*;
+
+public class BufferTest {
+
+	public static void main(String args[]){
+		CharBuffer cBuff = CharBuffer.allocate(100);
+		System.out.println("capacity:" + cBuff.capacity());
+		System.out.println("limit:" + cBuff.limit());
+		System.out.println("position:" + cBuff.position());
+		
+		
+		
+	}
+}

@@ -1,0 +1,18 @@
+package cn.bh.Test;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class PathTest {
+	
+	public static void main(String args[]){
+		Path path = Paths.get(".");
+		System.out.println("path numbers : " + path.getNameCount());
+		System.out.println("path root : " + path.getRoot());
+		
+		//获取path对应的绝对路径
+		Path absolutePath = path.toAbsolutePath();
+		System.out.println("absolutePath ：" + absolutePath);
+		
+	}
+}

@@ -1,0 +1,11 @@
+package cn.bh.Test;
+
+public class WatchServiceTest {
+
+	public static void main(String args[])
+		throws Exception
+	{
+		
+		
+	}
+}
