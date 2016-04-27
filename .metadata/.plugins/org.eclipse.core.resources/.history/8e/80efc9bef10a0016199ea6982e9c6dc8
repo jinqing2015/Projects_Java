@@ -1,0 +1,7 @@
+package cn.schema.simplefactory;
+
+public class PizzaStore {
+	
+	SimplePizzaFactory factory;
+	
+}

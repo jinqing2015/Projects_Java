@@ -1,0 +1,5 @@
+package cn.schema.simplefactory;
+
+public class SimplePizzaFactory {
+	public Pizza createPizza()
+}

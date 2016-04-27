@@ -1,0 +1,5 @@
+package cn.schema.simplefactory;
+
+public class Veggie extends Pizza {
+
+}

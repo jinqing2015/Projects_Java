@@ -1,0 +1,11 @@
+package cn.schema.factory;
+
+public class PizzaFactoryTest {
+	
+	public static void main(String args[]){
+		
+		System.out.println("--- In NY ,COBE order a cheese pizza");
+		PizzaStore nyStore = new NYStylePizzaStore();
+		nyStore.orderPizza(type);
+	}
+}

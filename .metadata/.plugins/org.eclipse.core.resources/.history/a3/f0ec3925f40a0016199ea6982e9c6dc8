@@ -1,0 +1,7 @@
+package cn.schema.factory;
+
+public abstract class Pizza {
+
+	String name;
+	
+}

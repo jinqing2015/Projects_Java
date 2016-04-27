@@ -16,7 +16,6 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.nio.file.FileStore"/>
 <fullyQualifiedTypeName name="java.nio.file.Files"/>
 <fullyQualifiedTypeName name="java.nio.file.SimpleFileVisitor"/>
@@ -27,4 +26,5 @@
 <fullyQualifiedTypeName name="java.nio.file.WatchService"/>
 <fullyQualifiedTypeName name="java.nio.file.WatchKey"/>
 <fullyQualifiedTypeName name="java.nio.file.WatchEvent"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

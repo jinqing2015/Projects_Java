@@ -1,0 +1,32 @@
+package cn.schema.simplefactory;
+
+public class CheesePizza extends Pizza{
+	
+	public CheesePizza(){
+		this.name = "CheesePizza";
+	}
+	@Override
+	public void prepare() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void bake() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cut() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void box() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

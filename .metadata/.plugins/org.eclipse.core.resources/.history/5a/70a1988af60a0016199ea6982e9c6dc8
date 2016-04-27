@@ -1,0 +1,8 @@
+package cn.schema.factory;
+
+public class NYStyleCheesePizza extends Pizza{
+	
+	public NYStyleCheesePizza(){
+		
+	}
+}

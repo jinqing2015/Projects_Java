@@ -1,0 +1,6 @@
+package cn.schema.simplefactory;
+
+public abstract class Pizza {
+
+	String name£»
+}

@@ -1,0 +1,6 @@
+package cn.schema.simplefactory;
+
+public class SimplePizzaFactoryTest {
+	PizzaStore pizzaStore = new PizzaStore();
+	
+}

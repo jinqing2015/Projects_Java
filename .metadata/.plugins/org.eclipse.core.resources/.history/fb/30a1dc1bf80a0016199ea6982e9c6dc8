@@ -1,0 +1,18 @@
+package cn.schema.factory;
+
+public abstract class PizzaStore {
+	
+	public void orderPizza(String type){
+		Pizza pizza = null;
+		pizza = this.createPizza(type);
+		
+		pizza.bake();
+		pizza.cut();
+		pizza.box();
+		
+		
+	}
+	
+	//工厂方法 ---Factory method
+	public abstract Pizza createPizza(String type); 
+}
