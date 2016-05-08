@@ -1,0 +1,37 @@
+package cn.bh.Test.MultiThread;
+
+public class DrawThread extends Thread{
+	
+	private Account account;
+	private int drawAmount;
+	
+	public DrawThread(String name, Account ac, int number){
+		super(name);
+		this.account = account;
+		this.drawAmount = number;
+	}
+	
+	@Override
+	public void run() {
+		if(account.getBalance() >= drawAmount){
+			
+			System.out.println(Thread.currentThread().getName() + "È¡Ç®³É¹¦" + drawAmount);
+			
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			account.setBalance(account.getBalance() - drawAmount);
+		}
+	}
+	
+	public static void main(String args[]){
+		
+		Account ac = new Account()
+	}
+	
+	
+}

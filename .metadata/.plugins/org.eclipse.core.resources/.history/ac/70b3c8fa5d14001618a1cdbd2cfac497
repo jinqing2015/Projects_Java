@@ -1,0 +1,15 @@
+package cn.bh.Test;
+
+public class SecondThread implements Runnable{
+	
+	private int i;
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for( ; i < 10; i++){
+			
+		}
+	}
+
+}

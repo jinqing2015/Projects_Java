@@ -1,0 +1,24 @@
+package cn.bh.Test.MultiThread;
+
+public class Account {
+
+	private String accountNo;
+	private int balance;
+	
+	@Override
+	public int hashCode() {
+		return accountNo.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj != null && obj.getClass() == Account.class){
+			
+		}
+		return false;
+	}
+	
+	
+}

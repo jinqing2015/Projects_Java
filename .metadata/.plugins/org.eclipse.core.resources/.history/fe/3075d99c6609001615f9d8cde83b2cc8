@@ -1,7 +1,0 @@
-package cn.bh.Test;
-
-import java.nio.*;
-public class BufferTest {
-
-	
-}

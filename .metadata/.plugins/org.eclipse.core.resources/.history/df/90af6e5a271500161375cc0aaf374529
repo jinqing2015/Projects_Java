@@ -1,0 +1,6 @@
+package cn.schema.Singleton;
+
+public class Singleton {
+
+	private Singleton uniqueInstance;
+}

@@ -1,0 +1,12 @@
+package cn.bh.Test;
+
+public class ThreadExceptionTest implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

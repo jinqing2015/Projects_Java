@@ -1,0 +1,17 @@
+package cn.schema.Singleton;
+
+public class Singleton {
+
+	private static Singleton uniqueInstance;
+	
+	private Singleton(){};
+	
+	//第一种方式
+	public static void getInstance(){
+		
+		if(uniqueInstance == null){
+			uniqueInstance = this.Singleton();
+		}
+	}
+	
+}

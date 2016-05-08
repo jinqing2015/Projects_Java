@@ -1,0 +1,14 @@
+package cn.bh.Test;
+
+public class FirstThread extends Thread{
+
+	private int  i;
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+	
+	
+
+}

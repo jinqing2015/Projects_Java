@@ -1,0 +1,9 @@
+package cn.schema.Singleton;
+
+//Ë«ÖØ¼ì²é¼ÓËø
+public class Singleton3 {
+	
+	private volatile static Singleton3 uniqueInstance;
+	
+	
+}

@@ -1,7 +1,0 @@
-package cn.schema.simplefactory;
-
-public class SimplePizzaFactoryTest {
-	SimplePizzaFactory factory = new SimplePizzaFactory();
-	PizzaStore pizzaStore = new PizzaStore();
-	
-}

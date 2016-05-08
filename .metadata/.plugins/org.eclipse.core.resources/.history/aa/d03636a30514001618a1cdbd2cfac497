@@ -1,0 +1,19 @@
+package cn.bh.Test;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class FinallyTest {
+
+	public static void main(String args[]){
+		
+		FileInputStream fis = null;
+		
+		try{
+			fis = new FileInputStream("a.txt");
+		}catch(IOException ioe){
+			
+		}
+		
+	}
+}

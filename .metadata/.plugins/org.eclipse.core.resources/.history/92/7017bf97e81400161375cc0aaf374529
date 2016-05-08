@@ -1,0 +1,7 @@
+package cn.bh.Test.MultiThread;
+
+public class Account {
+
+	private String accountNo;
+	private int balance;
+}

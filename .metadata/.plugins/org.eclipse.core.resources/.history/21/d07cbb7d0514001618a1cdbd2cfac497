@@ -1,0 +1,10 @@
+package cn.bh.Test;
+
+public class FinallyTest {
+
+	public static void main(String args[]){
+		
+		FileInputStream fis = null;
+		
+	}
+}
