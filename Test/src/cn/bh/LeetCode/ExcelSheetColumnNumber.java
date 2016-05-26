@@ -1,0 +1,32 @@
+package cn.bh.LeetCode;
+
+public class ExcelSheetColumnNumber {
+	
+    public static int titleToNumber(String s) {
+        
+    	int ret = 0;
+    	char[] str = s.toCharArray();
+    	
+    	for(int i = 0; i < str.length; i++){
+    		ret += ((str[i]-'A' + 1) * Math.pow(26, str.length - 1 - i));
+    	}
+    	
+    	return ret;
+        
+    }
+    public static String convertToTitle(int n) {
+        String str = "";
+        while(n > 0){
+
+        	str = (char) ((n-1)%26 + 'A') + str; 
+        	n = (n-1) / 26;
+        }
+        return str;
+    }
+    public static void main(String args[]){
+    	
+    	System.out.println(titleToNumber("AA"));
+    	System.out.println(convertToTitle(26));
+    }
+    
+}

@@ -1,0 +1,17 @@
+package cn.bh.Test;
+
+public class Test {
+	
+	public void test(){
+		System.out.println("In father test");
+	}
+	
+	public static void main(String args[]){
+		String a = String.valueOf(5);
+		
+		System.out.println(a);
+		System.out.println(Character.compare('a', 'b'));
+		
+	}
+}
+

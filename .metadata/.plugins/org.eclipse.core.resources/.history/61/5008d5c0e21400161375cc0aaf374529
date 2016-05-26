@@ -1,5 +1,0 @@
-package cn.bh.Test.MultiThread;
-
-public class YieldThread {
-
-}

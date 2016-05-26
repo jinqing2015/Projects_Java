@@ -1,0 +1,9 @@
+package cn.bh.LeetCode;
+
+public class ExcelSheetColumnNumber {
+	
+    public int titleToNumber(String s) {
+        int ret;
+        
+    }
+}

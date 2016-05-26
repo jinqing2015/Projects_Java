@@ -1,8 +1,0 @@
-package cn.bh.Test;
-
-public class ThrowsTest2 {
-
-	public static void main(String args[]) throws IOException{
-		
-	}
-}

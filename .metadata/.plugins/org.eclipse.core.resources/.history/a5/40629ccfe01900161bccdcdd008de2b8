@@ -1,0 +1,17 @@
+package cn.bh.LeetCode;
+
+public class ExcelSheetColumnNumber {
+	
+    public int titleToNumber(String s) {
+        
+    	int ret = 0;
+    	char[] str = s.toCharArray();
+    	
+    	for(int i = 0; i < str.length; i++){
+    		ret += (str[i] * Math.pow(26, i - str.length + 1));
+    	}
+    	
+    	return ret;
+        
+    }
+}

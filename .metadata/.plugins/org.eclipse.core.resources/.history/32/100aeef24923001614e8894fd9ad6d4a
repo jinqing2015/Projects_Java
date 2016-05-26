@@ -1,0 +1,19 @@
+package cn.bh.Test;
+
+public class Test {
+	
+	public void test(){
+		System.out.println("In father test");
+	}
+	
+	public static void main(String args[]){
+		Test t1 = new Test();
+		
+	}
+}
+class TestSon extends Test{
+	public void test(){
+		System.out.println("In son test");
+	}
+}
+

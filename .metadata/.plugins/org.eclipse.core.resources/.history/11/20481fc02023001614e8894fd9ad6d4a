@@ -1,0 +1,11 @@
+package cn.bh.Test;
+
+public class Test {
+
+	public static void main(String args[]){
+		String a = String.valueOf(5);
+		
+		System.out.println(a);
+		
+	}
+}
