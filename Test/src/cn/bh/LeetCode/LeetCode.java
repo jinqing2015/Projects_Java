@@ -50,7 +50,7 @@ public class LeetCode {
         ListNode p = head;
         ListNode q = head.next;
         head = q;
-        //¿ªÍ·Á½¸ö
+        //ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½
         p.next = q.next;
     	q.next = p;
     	ListNode p_front = p;
@@ -76,6 +76,112 @@ public class LeetCode {
          */
         
     }
+	//66
+	public int[] plusOne(int[] digits) {
+		
+		 int carry = 1;
+		 for (int i = digits.length-1; i>= 0; i--) {
+		        digits[i] += carry;
+		        if (digits[i] <= 9) // early return 
+		            return digits;
+		        digits[i] = 0;
+		    }
+		    int[] ret = new int[digits.length+1];
+		    ret[0] = 1;
+		    return ret;
+		
+    }
+	//67
+	//1010
+	//1010
+	//10100 11100
+	
+	public String addBinary(String a, String b) {
+        /*
+        StringBuilder sum = new StringBuilder();
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+        int carry = 0;
+        while (i >= 0 || j >= 0 || carry == 1) {
+            int digitA = i < 0 ? 0 : a.charAt(i--) - '0';
+            int digitB = j < 0 ? 0 : b.charAt(j--) - '0';
+            sum.insert(0, (digitA + digitB + carry) % 2);
+            carry = (digitA + digitB + carry) / 2;
+        }
+        return sum.toString(); 
+        */	
+		int[] arrA = StringToBinary(a);
+        int[] arrB = StringToBinary(b);
+        int[] arrC = arrA.length > arrB.length ? arrA : arrB;
+        
+        int array = 0;
+        int i = arrA.length - 1;
+        int j = arrB.length - 1;
+        int k = arrC.length - 1;
+        while(i >= 0 && j >= 0){
+        	arrC[k] = arrA[i] + arrB[j] + array;
+        	if(arrC[k] > 1){
+        		array = arrC[k] / 2;
+        		arrC[k] = arrC[k] % 2;
+        	}else
+        		array = 0;
+        	i--;
+        	j--;
+        	k--;
+        }
+        while(i >= 0){
+        	arrC[k] = arrA[i] + array;
+        	if(arrC[k] > 1){
+        		array = arrC[k] / 2;
+        		arrC[k] = arrC[k] % 2;
+        	}
+        	i--;
+        	k--;
+        }
+        while(j >= 0){
+        	arrC[k] = arrB[j] + array;
+        	if(arrC[k] > 1){
+        		array = arrC[k] / 2;
+        		arrC[k] = arrC[k] % 2;
+        	}
+        	j--;
+        	k--;
+        }
+        for(i = 0; i < arrC.length; i++)
+        	System.out.println(arrC[i]);
+        if(array > 0)
+        {
+        	int[] ret = new int[arrC.length + 1];
+        	for(i = 0; i < arrC.length; i++)
+        		ret[i + 1] = arrC[i];
+        	ret[0] = array;
+        	return BinaryToString(ret);
+        }
+        
+        return BinaryToString(arrC);
+        
+        
+    }
+	public int[] StringToBinary(String a){
+		int[] arr = new int[a.length()];
+		for(int i = 0; i < arr.length; i++){
+			if(a.charAt(i) == '1')
+				arr[i] = 1;
+			else
+				arr[i] = 0;
+		}
+		return arr;
+	}
+	public String BinaryToString(int[] a){
+		char[] ret = new char[a.length];
+		for(int i = 0; i < a.length; i++){
+			if(a[i] == 1)
+				ret[i] = '1';
+			else
+				ret[i] = '0';
+		}
+		return new String(ret);
+	}
 	//88
 	public void merge(int[] nums1, int m, int[] nums2, int n) {
        int index = m + n - 1;
@@ -181,12 +287,12 @@ public class LeetCode {
 		if(nums==null||nums.length==0){
 	        return 0;
 	    }
-	    int n0 = 0;  // ¼ÇÂ¼Ã»ÓÐÑ¡Ôñµ±Ç°housesÊ±µÄ»ñÈ¡µÄ×î´ó½ð¶î
-	    int n1 = 0;  // ¼ÇÂ¼Ñ¡Ôñµ±Ç°housesÊ±µÄ»ñÈ¡µÄ×î´ó½ð¶î
+	    int n0 = 0;  // ï¿½ï¿½Â¼Ã»ï¿½ï¿½Ñ¡ï¿½ï¿½Ç°housesÊ±ï¿½Ä»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	    int n1 = 0;  // ï¿½ï¿½Â¼Ñ¡ï¿½ï¿½Ç°housesÊ±ï¿½Ä»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	    for(int i=0; i<nums.length; i++){
 	        int tmp = n0;
-	        n0 = Math.max(n0,n1);  //Ã»ÓÐÑ¡Ôñµ±Ç°houses£¬ÄÇÃ´ËüµÈÓÚÉÏ´ÎÑ¡ÔñÁË»òÃ»Ñ¡ÔñµÄ×î´óÖµ  
-	        n1 = tmp+nums[i];  //Ñ¡ÔñÁËµ±Ç°houses£¬ÖµÖ»ÄÜµÈÓÚÉÏ´ÎÃ»Ñ¡ÔñµÄ+µ±Ç°housesµÄmoney
+	        n0 = Math.max(n0,n1);  //Ã»ï¿½ï¿½Ñ¡ï¿½ï¿½Ç°housesï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½Ñ¡ï¿½ï¿½ï¿½Ë»ï¿½Ã»Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ  
+	        n1 = tmp+nums[i];  //Ñ¡ï¿½ï¿½ï¿½Ëµï¿½Ç°housesï¿½ï¿½ÖµÖ»ï¿½Üµï¿½ï¿½ï¿½ï¿½Ï´ï¿½Ã»Ñ¡ï¿½ï¿½ï¿½+ï¿½ï¿½Ç°housesï¿½ï¿½money
 	    }
 	    return Math.max(n0, n1);
 		//return maxRob(nums, 0);
@@ -359,16 +465,33 @@ public class LeetCode {
 	    TreeNode r = lowestCommonAncestor(root.right, p, q);
 	    return l != null && r != null?root : l == null?r: l;
     }
-	
+	//118
+	public List<List<Integer>> generate(int numRows) {
+		List<List<Integer>> ret = new LinkedList<>();
+		if(numRows == 0)
+			return ret;
+		
+		List<Integer> temp = new LinkedList<>();
+		temp.add(1);
+		ret.add(temp);
+		
+		int i = 0;
+		while(i < numRows - 1){
+			temp = new LinkedList<>();
+			temp.add(1);
+			List<Integer> temp_front = ret.get(i);
+			for(int j = 0; j < temp_front.size() - 1; j++)
+				temp.add(temp_front.get(j) + temp_front.get(j + 1));
+			temp.add(1);
+			ret.add(temp);
+			i++;
+			
+		}
+		return ret;
+		
+    }	
 	public static void main(String args[]){
-		System.out.println(climbStairs(1));
-		System.out.println(climbStairs(2));
-		System.out.println(climbStairs(3));
-		System.out.println(climbStairs(4));
-		System.out.println(climbStairs(5));
-		System.out.println(climbStairs(6));
-		System.out.println(climbStairs(7));
-		System.out.println(climbStairs(8));
-		System.out.println(climbStairs(9));
+		LeetCode l = new LeetCode();
+		System.out.println(l.addBinary("1010", "1010"));
 	}
 }

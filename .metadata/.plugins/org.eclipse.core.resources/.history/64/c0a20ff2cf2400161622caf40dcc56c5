@@ -1,0 +1,33 @@
+package cn.bh.LeetCode;
+
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class MyQueue {
+	
+	private Deque<Integer> stack = null;
+	
+	public MyQueue(){
+		stack = new LinkedList<>();
+	}
+	
+	// Push element x to the back of queue.
+    public void push(int x) {
+        
+    }
+
+    // Removes the element from in front of queue.
+    public void pop() {
+        
+    }
+
+    // Get the front element.
+    public int peek() {
+        
+    }
+
+    // Return whether the queue is empty.
+    public boolean empty() {
+        
+    }
+}
