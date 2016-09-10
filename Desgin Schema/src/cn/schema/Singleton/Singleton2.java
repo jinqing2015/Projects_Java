@@ -3,7 +3,7 @@ package cn.schema.Singleton;
 //¼±ÇÐÊµÀý»¯
 public class Singleton2 {
 
-	private static Singleton2 uniqueInstance = new Singleton2();
+	private static final Singleton2 uniqueInstance = new Singleton2();
 	
 	private Singleton2(){};
 	

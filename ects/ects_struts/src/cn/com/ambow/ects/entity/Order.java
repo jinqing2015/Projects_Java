@@ -14,7 +14,7 @@ public class Order implements Comparable{
 	private   User   user;
 	private   PayWay payWay ;
 	private   OrderStatus status ;
-	private  Set   orderlines = new HashSet();
+	private   Set   orderlines = new HashSet();
 	public double getCost() {
 		return cost;
 	}
