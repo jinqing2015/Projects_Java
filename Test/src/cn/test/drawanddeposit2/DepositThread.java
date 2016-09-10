@@ -16,5 +16,4 @@ public class DepositThread extends Thread{
 			account.deposit(depositAmount);
 		}
 	}
-
 }
